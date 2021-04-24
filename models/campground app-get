@@ -1,0 +1,11 @@
+//campground test
+app.get('/makecampground', async (req, res) => {
+    const camp = new Campground({
+        title: 'Lakou trankil', 
+        price: 'en milyon senk san mil',
+        description: 'gwo bout lakou! men mete w piti tankou ti foumi!', 
+        location: 'Anba bannann'
+    });
+    await camp.save();
+    res.send(camp)
+}) 
